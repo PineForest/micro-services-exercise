@@ -1,0 +1,16 @@
+/target
+.settings
+.classpath
+.project
+*.epoch
+*.log
+.DS_Store
+/lib
+/target
+/test-target
+bin
+.metadata
+.recommenders
+log
+.idea/
+**/*.iml

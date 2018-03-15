@@ -1,0 +1,542 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Misc",
+		"_postman_id": "dfeabd1e-a7e2-e5e5-069e-180aa9639452",
+		"description": "Miscellaneous Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Departments",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/departments",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Departments by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/departments/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Department",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/departments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Human Surplus\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Department by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/departments/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Human Resources\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Department with Employees",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/departments/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Human Resources\",\n\t\"employees\": [\n\t\t{\n\t\t\t\"id\": 1\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Department by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/departments/n",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/employees",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/employees/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Fred Johnson\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/employees/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Fred Keagan\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//postman.setNextRequest(\"csrf-guard Token API\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{protocol}}://{{host}}:{{port}}/employees/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "Postman",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
